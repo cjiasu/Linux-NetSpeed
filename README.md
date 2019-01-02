@@ -1,7 +1,7 @@
 # Linux-NetSpeed
 安装：
 
-wget "https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+wget "https://github.com/ssmodu/Linux-NetSpeed/raw/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
 提示证书错误的话
 
