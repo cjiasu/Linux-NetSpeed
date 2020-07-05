@@ -1,6 +1,8 @@
 #优化
 echo "----------------内核参数优化-------------------"
-echo "fs.file-max = 65535" > /etc/sysctl.conf
+echo "fs.file-max = 65535" > /etc/sysctl.conf  
+echo "fs.nr_open = 65535" > /etc/sysctl.conf
+echo "kernel.pid_max = 65536" > /etc/sysctl.conf
 echo "net.core.rmem_max = 67108864" >> /etc/sysctl.conf
 echo "net.core.wmem_max = 67108864" >> /etc/sysctl.conf
 echo "net.core.netdev_max_backlog = 250000" >> /etc/sysctl.conf
@@ -17,8 +19,9 @@ echo "net.ipv4.tcp_rmem = 4096 87380 67108864" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_wmem = 4096 65536 67108864" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_mtu_probing = 1" >> /etc/sysctl.conf
 echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
-echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
+echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
+echo "vm.swappiness = 10" >> /etc/sysctl.conf
 echo "root soft nofile 65535" > /etc/security/limits.conf
 echo "root hard nofile 65535" >> /etc/security/limits.conf
 echo "root soft nproc 65535" >> /etc/security/limits.conf
