@@ -18,8 +18,6 @@ echo "net.ipv4.tcp_fastopen = 3" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_rmem = 4096 87380 67108864" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_wmem = 4096 65536 67108864" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_mtu_probing = 1" >> /etc/sysctl.conf
-echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
-echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
 echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 echo "vm.swappiness = 10" >> /etc/sysctl.conf
 echo "root soft nofile 65535" > /etc/security/limits.conf
