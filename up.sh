@@ -1,8 +1,8 @@
 #优化
 echo "----------------内核参数优化-------------------"
-echo "fs.file-max = 65535" > /etc/sysctl.conf  
-echo "fs.nr_open = 65535" > /etc/sysctl.conf
-echo "kernel.pid_max = 65536" > /etc/sysctl.conf
+echo "fs.file-max = 65535" >> /etc/sysctl.conf  
+echo "fs.nr_open = 65535" >> /etc/sysctl.conf
+echo "kernel.pid_max = 65536" >> /etc/sysctl.conf
 echo "net.core.rmem_max = 67108864" >> /etc/sysctl.conf
 echo "net.core.wmem_max = 67108864" >> /etc/sysctl.conf
 echo "net.core.netdev_max_backlog = 250000" >> /etc/sysctl.conf
