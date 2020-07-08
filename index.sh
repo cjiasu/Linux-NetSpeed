@@ -33,9 +33,6 @@ echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 lsmod | grep bbr
 
-#后台执行
-apt-get install screen -y && screen -S docker
-
 #安装DOCKER
 apt-get update && apt install apt-transport-https ca-certificates curl vim gnupg2 software-properties-common -y && curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && apt-get update && apt-get install docker-ce -y && systemctl start docker && systemctl enable docker && echo "Asia/Shanghai"  > /etc/timezone && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && date -R && /etc/init.d/cron restart
 
