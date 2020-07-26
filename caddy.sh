@@ -51,9 +51,9 @@ Download_caddy(){
 	fi
 	
 	if [[ ${bit} == "x86_64" ]]; then
-		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/download/linux/amd64${extension_all}"
+		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=arm64&p=github.com%2Fabiosoft%2Fcaddy-hmac&idempotency=52873762862622"
 	elif [[ ${bit} == "i386" || ${bit} == "i686" ]]; then
-		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/download/linux/386${extension_all}"
+		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/download/linux/386${extension_all}
 	elif [[ ${bit} == "armv7l" ]]; then
 		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/download/linux/arm7${extension_all}"
 	else
