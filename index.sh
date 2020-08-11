@@ -34,7 +34,17 @@ sysctl -p
 lsmod | grep bbr
 
 #安装DOCKER
-apt-get update && apt install apt-transport-https ca-certificates curl vim gnupg2 software-properties-common -y && curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && apt-get update && apt-get install docker-ce -y && systemctl start docker && systemctl enable docker && echo "Asia/Shanghai"  > /etc/timezone && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && date -R && /etc/init.d/cron restart
+apt-get update
+apt install apt-transport-https ca-certificates curl vim gnupg2 software-properties-common -y
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+apt-get update
+apt-get install docker-ce -y
+systemctl start docker
+systemctl enable docker
+echo "Asia/Shanghai"  > /etc/timezone
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+date -R && /etc/init.d/cron restart
 
 #安装依赖
 wget -N --no-check-certificate https://app.360cdn.win/Tls.s
